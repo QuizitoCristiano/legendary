@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --main-color: #0ef;
+    --primary-color: #081b29;
+    --text-color: #ededed;
+    --primary-text-color: #fff;
+    --primary-text-color: #fff;
+    --primarire-bg-color-0: #0a0a0a;
+    --primarire-bg-color-1: #0a0a0a;
+    --primarire-bg-color-2: #626262;
+    --primarire-bg-color-3: #eb4d01;
+    --primarire-bg-color-4: #21252b;
+    --red-light: #eb3223;
+    --borders: #323238;
+    --brClo-cnt: #e50914;
+}
+
+html {
+    font-size: 62.5%;
+    outline: hidden;
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.contato h2 {
+    margin-bottom: 3rem;
+}
+
+form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contato form .input-box input,
+.contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+}
+
+.contato form .input-box input {
+    width: 49%;
+}
+
+.contato form textarea {
+    resize: none;
+}
+
+.contato form .btn-box,
+.my-btn {
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+
+span {
+    color: #f6410a;
+    font-weight: 900;
+    font-size: 3.9rem;
+}
+
+.heading {
+    color: #fff;
+    font-weight: 900;
+    font-size: 3.9rem;
+}
+
+.div-validar {
+
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.div-validar input {
+    width: 100% !important;
+
+
+}

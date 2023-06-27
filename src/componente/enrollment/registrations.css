@@ -1,0 +1,11 @@
+.element-style {
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0px 0px 20px;
+    font-size: 24px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+}

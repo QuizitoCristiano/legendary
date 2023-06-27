@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+
+
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --main-color: #0ef;
+  --primary-color: #081b29;
+  --text-color: #ededed;
+  --primary-text-color: #fff;
+  --primarire-bg-color-0: #0a0a0a;
+  --primarire-bg-color-1: #0a0a0a;
+  --primarire-bg-color-2: #626262;
+  --primarire-bg-color-3: #eb4d01;
+  --primarire-bg-color-4: #21252b;
+  --red-light: #eb3223;
+  --borders: #323238;
+  --brClo-cnt: #e50914;
+}
+
+html {
+  font-size: 62.5%;
+  outline: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--primary-text-color);
+}
+
+.header .Link-logos {
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  padding: 1rem 9%;
+  background: var(--primarire-bg-color-0) !important;
+  background: transparent;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+
+
+.logo {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.logo img {
+  height: 120px;
+
+}
+
+
+.header .Link-logos,
+.active {
+  font-size: 18px;
+  color: #ededed;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.5s;
+}
+
+.header .Link-logos:hover,
+.header .active {
+  color: #f6410a;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.styles_line {
+  width: 1.5px;
+  height: 80px;
+  background: linear-gradient(180deg, #f6410a, rgba(153, 109, 255, 0));
+}
+
+.div-box-button {
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 2rem;
+  height: auto;
+  width: 13rem;
+}
+
+.div-box-button button {
+  background-color: #f6410a;
+  color: #fff;
+  font-weight: 800;
+
+  border: none;
+  outline: none !important;
+}
+
+.itens-menu-celular {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.itens-menu-celular a {
+  margin: 1rem 0;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.itens-menu-celular a:hover {
+  font-family: "monospace", sans-serif;
+  font-size: 40px;
+  color: #f6410a;
+}
+
+.menu-celular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  background: rgba(17, 18, 17, 0.95);
+  background: linear-gradient(34deg, rgba(25, 88, 24, 0.95) 8%, rgba(17, 18, 17, 0.95) 95%);
+  transition: 0.6s;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0.5rem 1rem;
+  animation-name: menucelular;
+  animation-fill-mode: forwards;
+  animation-duration: 0.9s;
+  font-weight: 800;
+  font-size: 2rem;
+
+
+  transform: translateY(-50%);
+
+  /* transition: 0.6s; */
+  transition: 0.5s;
+  opacity: 0;
+  animation-name: menucelular;
+  animation-fill-mode: forwards;
+  animation-duration: 0.9s;
+  transform: translateY(-50%);
+}
+
+
+.logo-icons {
+
+  display: none !important;
+  align-items: center;
+  justify-content: space-between !important;
+
+}
+
+
+
+@keyframes menucelular {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.logo-icons {
+  display: none !important;
+}
+
+.itens-menu-celular {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    display: none;
+    font-size: 10px;
+  }
+
+  .logo-icons {
+    display: flex !important;
+  }
+
+  .logo-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60px;
+    width: 100%;
+    background-color: var(--primary-color);
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    padding: 20px 10%;
+    padding: 1rem 9%;
+  }
+}
+
+@media screen and (max-width: 100px) {
+  .header {
+    display: flex;
+    font-size: 10px;
+  }
+
+  .logo-icons {
+    display: none !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
