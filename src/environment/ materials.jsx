@@ -18,13 +18,8 @@ export const Oquelevarparatop = () => {
             }}>
                 <Stack className="logo-containe">
                     <h2 className="div-text-top">Tudo o que precisa levar <span>para o seu Top</span></h2>
-
                     <button>Encontre na Lista</button>
                 </Stack>
-
-
-
-
             </Typography>
 
         </>

@@ -4,6 +4,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Home } from './pages/home'
 import { MainLayout } from "./layouts/mylayouts"
+import { Login } from './componente/contatos/contacts'
+import { ListaPraTop } from './componente/listaParaTop/listToTop'
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/ListaPraTop' element={<ListaPraTop />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>

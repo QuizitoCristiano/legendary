@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import meuVideo from '../videos/WhaVideo-top-Ane.mp4';
+import myvideo from '../videos/legendario-Top.mp4'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import DoneIcon from '@mui/icons-material/Done';
@@ -17,6 +18,7 @@ import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
+import { Margin } from "@mui/icons-material";
 
 
 const steps = [
@@ -74,8 +76,6 @@ export const Home = () => {
 
     return (
         <>
-
-
             <Typography
                 sx={{
 
@@ -86,8 +86,12 @@ export const Home = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     flexDirection: "column",
+                    gap: '5rem',
 
-                    gap: '5rem'
+                    '@media only screen and (max-width: 800px)': {
+                        width: '100%',
+                        position: 'relative'
+                    }
 
                 }}>
 
@@ -97,27 +101,70 @@ export const Home = () => {
                     justifyContent: "center",
                     flexDirection: "row",
                     overflow: 'hidden',
-                    gap: '5rem'
+                    width: '100%',
+                    gap: '5rem',
+
+
+                    '@media only screen and (max-width: 800px)': {
+                        flexWrap: "wrap",
+                        display: 'flex',
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                        width: '100%',
+                    }
 
                 }}>
 
-                    <Stack className="container">
+                    <Stack
+                        // className="container"
+
+                        sx={{
+                            display: 'flex',
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            width: '100%',
+
+                            '@media only screen and (max-width: 800px)': {
+                                flexWrap: "wrap",
+
+                            }
+                        }}
+                    >
 
 
                         <h2 className="heading">DESAFIO <span>72HS - TOP</span></h2>
                         <Box className="wrapper-text">
 
-                            <p sx={{ fontWeight: '800', fontSize: '30px' }}>
+                            <Typography sx={{
+
+                                fontSize: '1.9em',
+                                fontWeight: '800',
+
+                                '@media only screen and (max-width: 800px)': {
+                                    fontWeight: '700',
+                                    fontSize: '1.5rem',
+                                }
+                            }}>
                                 TRANSFORMANDO CARÁTER, RESTAURANDO
 
-                            </p>
-                            <p>
-                                HOMENS E HISTÓRIAS DIGNAS DE SEREM CONTADAS.
-                            </p>
-                        </Box>
-                        <Box className="wrapper-video">
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontSize: '1.9em',
+                                    fontWeight: '800',
 
+                                    '@media only screen and (max-width: 800px)': {
+                                        fontWeight: '700',
+                                        fontSize: '1.5rem',
+
+                                    }
+                                }}>
+                                HOMENS E HISTÓRIAS DIGNAS DE SEREM CONTADAS.
+                            </Typography>
                         </Box>
+
 
                     </Stack>
                     <Box sx={{
@@ -125,16 +172,23 @@ export const Home = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column",
-                        gap: '2rem'
+                        gap: '2rem',
+                        position: 'relative',
+                        width: '100%'
                     }}>
-                        <div className="div-video">
+                        <Typography
+                            className="div-video"
+
+
+                        >
 
                             <video controls>
-                                <source src={meuVideo} type="video/mp4" />
+                                <source src={myvideo} type="video/mp4" />
+
 
                             </video>
 
-                        </div>
+                        </Typography>
                         <div className="styles_line"></div>
 
                     </Box>
@@ -148,33 +202,56 @@ export const Home = () => {
                         justifyContent: "center",
                         flexDirection: "row",
                         overflow: 'hidden',
+                        width: '100%',
+                        height: 'auto',
                         gap: '5rem',
-                        // backgroundColor: 'red'
 
+
+
+                        '@media only screen and (max-width: 800px)': {
+
+                            flexWrap: "wrap",
+                        }
 
                     }}
                 >
                     <Stack sx={{
-                        // backgroundColor: 'red',
-                        width: "50%",
-                        height: "auto"
+                        // width: "50%",
+                        height: "auto",
+                        width: '90%',
+
+
                     }}
-                        className="New-Wrapper-text">
+                    // className="New-Wrapper-text"
+                    >
+                        <Typography
+                            sx={{
 
-                        <p>
+                                fontWeight: '800',
+                                fontSize: '1.8rem',
+                                width: '100%',
 
+                                '@media only screen and (max-width: 800px)': {
+                                    color: '#fff',
+                                    fontSize: '1.8em',
+                                    fontWeight: '100',
+                                    width: '100%',
+                                }
+
+                            }}
+                        >
                             O Desafio 72 hs - TOP Ane é um evento de total conexão com Deus, através da natureza e longe da civilização. É uma oportunidade para os participantes redescobrirem a configuração original que o Criador projetou para os homens, provando o caráter, amizade e gerando fé.
                             Você pode caminhar muito, mas são apenas os 18 centímetros entre a cabeça e o coração que realmente importa.
                             Durante as 72 horas, os homens trabalham em equipe e descobrem lições importantes sobre o propósito definido por Deus para as suas vidas. Eles são desafiados fisicamente, mentalmente e espiritualmente e, em algum momento, todos atingem o objetivo desejado.
                             O primeiro Desafio 72hs - aconteceu em junho de 2023 na Curitiba, com um grupo de 109 homens. Hoje somam mais de 21.000 em diversos países, que, ao final do evento, são conhecidos como "Legendários"
                             Os 3 primeiros Legendários brasileiros participaram na Guatemala em junho de 2017, e juntamente com outros pioneiros de Balneário Camboriú/SC, realizaram o primeiro REC BRASIL em novembro de 2018 no Vale Europeu em Santa Catarina.
-                        </p>
+                        </Typography>
                     </Stack>
                     <Stack sx={{
-                        // backgroundColor: 'red',
+                        // width: "50%",
+                        width: "90%",
+                        height: "auto",
 
-                        width: "50%",
-                        height: "auto"
                     }}
 
                         className="selection ">
@@ -182,10 +259,13 @@ export const Home = () => {
                         <h2 className="heading">PERGUNTAS <span>FREQUENTES</span></h2>
 
                         <Box sx={{ width: "100%", height: "auto" }}>
-                            <Stepper activeStep={activeStep} orientation="vertical">
+                            <Stepper activeStep={activeStep} orientation="vertical"
+
+                            >
                                 {steps.map((step, index) => (
                                     <Step key={step.label}>
                                         <StepLabel
+
                                             sx={{ color: '#FF6510', fontSize: '25px', fontWeight: '800' }}
                                             optional={
 
@@ -247,14 +327,6 @@ export const Home = () => {
                             )}
                         </Box>
 
-
-
-
-
-
-
-
-
                     </Stack>
                 </Typography>
                 <Typography>
@@ -262,68 +334,73 @@ export const Home = () => {
 
 
                     <Stack
-                        // sx={{
-                        //     display: "flex",
-                        //     alignItems: "center",
-                        //     justifyContent: "space-between",
-                        //     flexDirection: "row",
-                        // }}
-                        class="Portfolio" id="portfolio">
 
-                        <div class="prpfile-container">
+                        // className="Portfolio" id="portfolio"
 
-                            <div class="Portolio-box">
+                        sx={{
 
-                                <div class="portfolio-leyer">
-                                    <h2>TOP Ane CURITIBA</h2>
-                                    <button>Nova Incrição</button>
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexDirection: 'row',
+                            flexWrap: "wrap",
+                            width: '100%',
+                            height: 'auto',
+                            gap: '4em',
+                        }}
 
-                                    <p>< CalendarTodayIcon className="portfolio-icons" /> 07 A 10 DE SETEMBRO DE 2023</p>
-                                    <p> <AddLocationAltIcon className="portfolio-icons" /> Curitiba, PR</p>
+                    >
 
 
-                                    <p>< DoneIcon className="portfolio-icons" />     R$1190,00 à vista</p>
-                                    <p><DoneIcon className="portfolio-icons" />       R$1230,00 em até 3x </p>
-                                    <p><DoneIcon className="portfolio-icons" />      R$1260,00 em até 6x</p>
-                                    <p><DoneIcon className="portfolio-icons" />    R$1300,00 em até 10x</p>
 
-                                </div>
+                        <Box className="Portolio-box">
+
+                            <div className="portfolio-leyer">
+                                <h2>TOP Ane CURITIBA</h2>
+                                <button>Nova Incrição</button>
+
+                                <p>< CalendarTodayIcon className="portfolio-icons" /> 07 A 10 DE SETEMBRO DE 2023</p>
+                                <p> <AddLocationAltIcon className="portfolio-icons" /> Curitiba, PR</p>
+
+                                <p>< DoneIcon className="portfolio-icons" />     R$1190,00 à vista</p>
+                                <p><DoneIcon className="portfolio-icons" />       R$1230,00 em até 3x </p>
+                                <p><DoneIcon className="portfolio-icons" />      R$1260,00 em até 6x</p>
+                                <p><DoneIcon className="portfolio-icons" />    R$1300,00 em até 10x</p>
+
                             </div>
+                        </Box>
 
+                        <Box class="Portolio-box">
+                            <div class="portfolio-leyer">
+                                <h2> TOP 573 PANTANAL</h2>
+                                <button>Nova Incrição</button>
 
+                                <p>< CalendarTodayIcon className="portfolio-icons" /> 07 A 10 DE SETEMBRO DE 2023</p>
+                                <p> <AddLocationAltIcon className="portfolio-icons" /> Curitiba, PR</p>
 
-
-                            <div class="Portolio-box">
-                                <div class="portfolio-leyer">
-                                    <h2> TOP 573 PANTANAL</h2>
-                                    <button>Nova Incrição</button>
-
-                                    <p>< CalendarTodayIcon className="portfolio-icons" /> 07 A 10 DE SETEMBRO DE 2023</p>
-                                    <p> <AddLocationAltIcon className="portfolio-icons" /> Curitiba, PR</p>
-
-                                    <p>< DoneIcon className="portfolio-icons" />     R$1190,00 à vista</p>
-                                    <p><DoneIcon className="portfolio-icons" />       R$1230,00 em até 3x </p>
-                                    <p><DoneIcon className="portfolio-icons" />      R$1260,00 em até 6x</p>
-                                    <p><DoneIcon className="portfolio-icons" />    R$1300,00 em até 10x</p>
-                                </div>
+                                <p>< DoneIcon className="portfolio-icons" />     R$1190,00 à vista</p>
+                                <p><DoneIcon className="portfolio-icons" />       R$1230,00 em até 3x </p>
+                                <p><DoneIcon className="portfolio-icons" />      R$1260,00 em até 6x</p>
+                                <p><DoneIcon className="portfolio-icons" />    R$1300,00 em até 10x</p>
                             </div>
+                        </Box>
 
-                            <div class="Portolio-box">
+                        <Box class="Portolio-box">
 
-                                <div class="portfolio-leyer">
-                                    <h2>TOP 514 RIO DE JANEIRO </h2>
-                                    <button>Nova Incrição</button>
+                            <div class="portfolio-leyer">
+                                <h2>TOP 514 RIO DE JANEIRO </h2>
+                                <button>Nova Incrição</button>
 
-                                    <p>< CalendarTodayIcon className="portfolio-icons" />24 A 27 DE AGOSTO DE 2023 </p>
-                                    <p> <AddLocationAltIcon className="portfolio-icons" /> Rio de Janeiro, RJ</p>
+                                <p>< CalendarTodayIcon className="portfolio-icons" />24 A 27 DE AGOSTO DE 2023 </p>
+                                <p> <AddLocationAltIcon className="portfolio-icons" /> Rio de Janeiro, RJ</p>
 
-                                    <p>< DoneIcon className="portfolio-icons" />     R$1190,00 à vista</p>
-                                    <p><DoneIcon className="portfolio-icons" />       R$1230,00 em até 3x </p>
-                                    <p><DoneIcon className="portfolio-icons" />      R$1260,00 em até 6x</p>
-                                    <p><DoneIcon className="portfolio-icons" />    R$1300,00 em até 10x</p>
-                                </div>
+                                <p>< DoneIcon className="portfolio-icons" />     R$1190,00 à vista</p>
+                                <p><DoneIcon className="portfolio-icons" />       R$1230,00 em até 3x </p>
+                                <p><DoneIcon className="portfolio-icons" />      R$1260,00 em até 6x</p>
+                                <p><DoneIcon className="portfolio-icons" />    R$1300,00 em até 10x</p>
                             </div>
-                        </div>
+                        </Box>
+
                     </Stack>
 
                 </Typography>
@@ -343,14 +420,14 @@ export const Home = () => {
                 <Typography
                     sx={{
                         width: "100%",
-                        height: '50rem',
+                        height: '60rem',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                         flexDirection: 'column',
                         backgroundSize: 'cover',
                         backgroundImage: 'url(../imagens/Fahad-Badar.png)',
-                        // gap: '50px',
+                        gap: '50px',
                     }}
                 >
 

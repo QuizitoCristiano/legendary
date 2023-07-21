@@ -12,12 +12,6 @@ import { border, width } from "@mui/system";
 import { blue } from "@mui/material/colors";
 
 
-
-
-
-
-
-
 export const Cards = ({
     title, text1, text2, text3, text4
 }) => {
@@ -51,13 +45,22 @@ export const Baseboards = () => {
                     backgroundColor: '#0a0a0a',
                     position: 'relative',
                     gap: '30px',
+                    flexWrap: 'wrap'
                 }}
             >
-                <Stack>
+                <Stack sx={{}}>
                     <Box className="Footer-img">
                         <img src={Legendarios} alt="Atee" />
                     </Box>
-                    <Stack className="social-media" direction="row" my={3} spacing={1} data-aos="fade-down">
+                    <Stack className="social-media" direction="row" my={3} spacing={1} data-aos="fade-down"
+                        sx={{
+
+                            height: 'auto',
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            gap: '10px',
+                        }}
+                    >
                         <Box><WhatsAppIcon className="my-social-media" /></Box>
                         <Box><InstagramIcon className="my-social-media" /></Box>
                         <Box><YouTubeIcon className="my-social-media" /></Box>
@@ -66,10 +69,18 @@ export const Baseboards = () => {
                 </Stack>
 
                 <Stack className="div-inputs-footer"
+
+                    sx={{
+
+                        height: 'auto',
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: '40px'
+                    }}
+
                     direction="row"
                     my={3}
                     spacing={1}
-                    data-aos="fade-down"
                 >
                     <Typography data-aos="fade-right" >
                         <Cards
@@ -96,15 +107,14 @@ export const Baseboards = () => {
                             title='Fale Conosco'
                             text1='Email e telefone'
                             text3="lengendarioscuritiba@gmail.br"
-                            text2="(+55) 41 99761-0740 "
+                            text2="(+55) 41 99761-0748 "
 
                         />
 
                     </Typography>
 
                 </Stack>
-
-                <Stack sx={{ width: '100%', gap: '40px', display: 'flex', flexDirection: 'row', alignContent: 'center', justifyContent: 'center' }}>
+                <Stack sx={{ width: '100%', gap: '40px', display: 'flex', flexDirection: 'row', alignContent: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <TextField sx={{ width: '50%', border: 'solid 2px #117aeb', borderRadius: '5px', color: '#fff', }} placeholder="email" ></TextField >
 
                     <Button sx={{
@@ -130,8 +140,6 @@ export const Baseboards = () => {
                         outline: 'none !important',
 
                     }}>
-
-
                         enviar
                     </Button>
                 </Stack>

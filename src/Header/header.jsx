@@ -5,10 +5,12 @@ import DehazeIcon from "@mui/icons-material/Dehaze";
 import Lengendarios from "../imagens/legendarios.png"
 import { Box, Stack } from "@mui/material";
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+// import { Login } from "../componente/contatos/contacts"
+
 
 
 export const Header = () => {
-
 
 
     return (
@@ -25,30 +27,33 @@ export const Header = () => {
                 <Box className="div-box-button">
                     <div className="styles_line"></div>
 
-                    <button to={{
-                        borderRadius: '4px',
-                        fontSize: '16px',
-                        fontWeight: '500',
-                        width: '100%',
+                    <Link to="/">
+                        <Button sx={{
+                            borderRadius: '4px',
+                            bgcolor: '#f6410a',
+                            fontSize: '12px',
+                            fontWeight: '500',
+                            width: '100%',
+                            height: '40px',
+                            Color: '#fff',
+                            border: 'none',
+                            outline: 'none',
+                            fontFamily: 'Roboto sans-serif',
+                            fontFamily: 'Shrikhand cursive',
+                            fontWeight: '900',
 
-                        Color: '#fff',
-                        border: 'none',
-                        outline: 'none',
-                        fontFamily: 'Roboto sans-serif',
-                        fontFamily: 'Shrikhand cursive',
-                        fontWeight: '900',
-
-                        backgroundColor: '#e50914 !important'
-                    }}
-                    >Vamos Lá?
-                    </button>
+                            backgroundColor: '#FF6510 !important'
+                        }}
+                        >Vamos Lá?
+                        </Button>
+                    </Link>
                 </Box>
 
                 <Link className="active" to="/SobreNo">
                     Quem somos
                 </Link>
 
-                <Link className="Link-logos" to="/Registrations">
+                <Link className="Link-logos" to="/ListaPraTop">
                     Lista para Top
                 </Link>
 
@@ -57,6 +62,7 @@ export const Header = () => {
                 </Link>
                 <Link className="Link-logos" to="/Login">
                     Contato
+
                 </Link>
             </Box>
         </>

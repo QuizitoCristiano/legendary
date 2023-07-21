@@ -20,6 +20,14 @@
     color: #FF6510;
 }
 
+@media only screen and (max-width: 600px) {
+
+    .div-text-top {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
 /* .logo-containe::before {
     width: 75vw;
 
