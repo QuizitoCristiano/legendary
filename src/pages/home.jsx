@@ -265,6 +265,7 @@ export const Home = () => {
                                 {steps.map((step, index) => (
                                     <Step key={step.label}>
                                         <StepLabel
+<<<<<<< HEAD
 
                                             sx={{ color: '#FF6510', fontSize: '25px', fontWeight: '800' }}
                                             optional={
@@ -276,8 +277,10 @@ export const Home = () => {
                                                     </Typography>
                                                 ) : null
                                             }
+=======
+>>>>>>> b69734e65b2497f77aa8a3474fb909af9304769f
                                         >
-                                            {step.label}
+                                            <Typography sx={{ color: '#FF6510', fontSize: '15px', fontWeight: '800' }}>{step.label}</Typography>
                                         </StepLabel>
                                         <StepContent>
                                             <Typography sx={{ color: '#fff', fontSize: '15px', fontWeight: '800' }}
