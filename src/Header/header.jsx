@@ -8,15 +8,11 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 // import { Login } from "../componente/contatos/contacts"
 
-
-
 export const Header = () => {
 
 
     return (
         <>
-
-
             <Box className="header">
                 <Link to="/">
                     <div className="logo" to="/">
@@ -49,15 +45,13 @@ export const Header = () => {
                     </Link>
                 </Box>
 
-                <Link className="active" to="/SobreNo">
-                    Quem somos
-                </Link>
+
 
                 <Link className="Link-logos" to="/ListaPraTop">
                     Lista para Top
                 </Link>
 
-                <Link className="Link-logos" to="/MeteriasTop">
+                <Link className="Link-logos" to="/MeteriasparaTop">
                     O que Levar
                 </Link>
                 <Link className="Link-logos" to="/Login">

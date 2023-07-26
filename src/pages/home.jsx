@@ -265,20 +265,6 @@ export const Home = () => {
                                 {steps.map((step, index) => (
                                     <Step key={step.label}>
                                         <StepLabel
-<<<<<<< HEAD
-
-                                            sx={{ color: '#FF6510', fontSize: '25px', fontWeight: '800' }}
-                                            optional={
-
-                                                index === 2 ? (
-                                                    <Typography
-                                                        sx={{ color: '#FF6510', fontSize: '15px', fontWeight: '800' }}
-                                                        variant="caption">Último passo
-                                                    </Typography>
-                                                ) : null
-                                            }
-=======
->>>>>>> b69734e65b2497f77aa8a3474fb909af9304769f
                                         >
                                             <Typography sx={{ color: '#FF6510', fontSize: '15px', fontWeight: '800' }}>{step.label}</Typography>
                                         </StepLabel>
@@ -333,12 +319,10 @@ export const Home = () => {
                     </Stack>
                 </Typography>
                 <Typography>
-                    <h2 className="heading">Sobre  os<span> Tops</span></h2>
+                    <h2 className="heading">Sobre  os<span> Tops do Brasil</span></h2>
 
 
                     <Stack
-
-                        // className="Portfolio" id="portfolio"
 
                         sx={{
 
@@ -420,24 +404,24 @@ export const Home = () => {
                 }}>
                     <Oquelevarparatop />
                 </Typography>
-                <Typography
-                    sx={{
-                        width: "100%",
-                        height: '60rem',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        flexDirection: 'column',
-                        backgroundSize: 'cover',
-                        backgroundImage: 'url(../imagens/Fahad-Badar.png)',
-                        gap: '50px',
-                    }}
-                >
 
-                    <Baseboards />
-                </Typography>
             </Typography>
+            <Typography
+                sx={{
+                    width: "100%",
+                    height: '60rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexDirection: 'column',
+                    backgroundSize: 'cover',
+                    backgroundImage: 'url(../imagens/Fahad-Badar.png)',
+                    gap: '50px',
+                }}
+            >
 
+                <Baseboards />
+            </Typography>
         </>
     )
 }

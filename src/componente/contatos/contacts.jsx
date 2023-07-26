@@ -1,10 +1,12 @@
 import React from "react";
 import './contacts.css';
 import { Box, FormControl, FormControlLabel, Input, Stack, TextField, Typography } from "@mui/material";
-import { OutlinedInput, FormHelperText, InputLabel } from '@mui/material';
+import { OutlinedInput, FormHelperText, InputLabel, Button } from '@mui/material';
+
 
 import Checkbox from '@mui/material/Checkbox';
-
+import { Baseboards } from "../baseboards/footer";
+import Lengendarios from "../../imagens/legendarios.png"
 
 export const Login = () => {
 
@@ -49,25 +51,36 @@ export const Login = () => {
                         sx={{
                             minHeight: "100vh",
                             width: '100%',
+                            gap: '2rem',
 
                             "@media (max-width: 800px)": {
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
                                 flexDirection: "column",
+                                gap: '2rem'
                             }
                         }}
                     >
+                        <Typography sx={{
+
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            height: 'auto'
+                        }}>
+
+                            <img src={Lengendarios} alt="" />
+                        </Typography>
                         <Typography>
 
-                            <h2 className="heading">Entre Em Contato <span>Com agente!</span></h2>
+                            <h2 className="heading">Faça sua <span>Inscrições Legendários</span></h2>
                         </Typography>
 
 
                         <Typography
                             sx={{
                                 // backgroundColor: 'rgb(240, 240, 240)',
-                                padding: '10px',
                                 width: '100%',
                                 gap: '2em',
                                 height: '100vh',
@@ -76,185 +89,18 @@ export const Login = () => {
                                 justifyContent: "center",
                                 flexDirection: "column",
 
+
                             }}
                         >
-
-                            <Box
-                                sx={{
-
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="Nome:"
-                                    variant="filled"
-                                />
-                            </Box>
-
-                            <Box
-                                sx={{
-
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="CPF:"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="Email"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="Contato"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="Pais"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="
-                                    Cidade"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="Cidade"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="
-                                    Responsável"
-                                    variant="filled"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    bgcolor: 'blue',
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-
-                                <TextField
-                                    sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
-                                    id="outlined-basic"
-                                    label="Cidade"
-                                    variant="filled"
-                                />
-                            </Box>
-
-                            <Box
-                                sx={{
-
-                                    width: '100%',
-                                    display: "flex",
-                                    alignItems: "center",
-                                    alignSelf: 'center',
-                                    flexDirection: "row",
-                                }}>
-
+                            <Stack sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                textAlign: 'center',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                width: '100%',
+                                gap: '5rem'
+                            }}>
 
                                 <Box
                                     sx={{
@@ -262,27 +108,107 @@ export const Login = () => {
                                         width: '100%',
                                         display: "flex",
                                         alignItems: "center",
-                                        alignSelf: 'center',
-                                        flexDirection: "row",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
                                     }}
                                 >
-                                    <Checkbox
-                                        checked={checked}
-                                        onChange={handleChange}
-                                        inputProps={{ 'aria-label': 'controlled' }}
-                                        label="Masculino"
-                                    />
-                                    <Typography>Masculino</Typography>
 
-                                    <Checkbox
-                                        checked={checked}
-                                        onChange={handleChange}
-                                        inputProps={{ 'aria-label': 'controlled' }}
-                                        label="Masculino"
+                                    <TextField
+                                        sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
+                                        id="outlined-basic"
+                                        label="Nome:"
+                                        variant="filled"
                                     />
-                                    <Typography>Feminino</Typography>
                                 </Box>
-                            </Box>
+
+                                <Box
+                                    sx={{
+
+                                        width: '100%',
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                    }}
+                                >
+
+                                    <TextField
+                                        sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
+                                        id="outlined-basic"
+                                        label="CPF:"
+                                        variant="filled"
+                                    />
+                                </Box>
+
+
+
+                            </Stack>
+
+                            <Stack sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                textAlign: 'center',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                width: '100%',
+                                gap: '5rem'
+
+                            }}>
+
+                                <Box
+                                    sx={{
+                                        bgcolor: 'blue',
+                                        width: '100%',
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                    }}
+                                >
+
+                                    <TextField
+                                        sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
+                                        id="outlined-basic"
+                                        label="Número do Celular"
+                                        variant="filled"
+                                    />
+                                </Box>
+                                <Box
+                                    sx={{
+                                        bgcolor: 'blue',
+                                        width: '100%',
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                    }}
+                                >
+
+                                    <TextField
+                                        sx={{ bgcolor: 'rgb(240, 240, 240)', width: '100%' }}
+                                        id="outlined-basic"
+                                        label="Email"
+                                        variant="filled"
+                                    />
+                                </Box>
+
+                            </Stack>
+
+
+
+
+                            <Typography>
+                                <Button
+                                    sx={{
+                                        backgroundColor: '#f6410a',
+                                        color: '#fff',
+                                        fontWeight: '800',
+                                        border: 'none',
+                                        fontSize: '1.5rem',
+                                        padding: '1.5rem 2rem',
+                                    }}
+                                >Enviar Dados</Button>
+                            </Typography>
                         </Typography>
 
 
@@ -294,6 +220,11 @@ export const Login = () => {
                 </Stack>
 
 
+            </Typography>
+
+
+            <Typography>
+                <Baseboards />
             </Typography>
         </>
     )

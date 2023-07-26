@@ -4,6 +4,14 @@ import { Box, FormControl, FormControlLabel, Input, Stack, TextField, Typography
 import { OutlinedInput, FormHelperText, InputLabel } from '@mui/material';
 import { textAlign } from '@mui/system';
 import { Baseboards } from '../baseboards/footer';
+import { useState } from 'react';
+import CheckIcon from '@mui/icons-material/Check';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import Collapse from '@mui/material/Collapse';
 
 
 export const Cards = ({
@@ -34,8 +42,18 @@ export const Cards = ({
 
 
 export const ListaPraTop = () => {
-    const [open, setOpen] = React.useState(true);
+    const [expanded, setExpanded] = useState(false);
 
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
+
+    const [abreIcon, setAbreIcon] = useState()
+
+
+    const abreIconClick = () => {
+        setAbreIcon(!abreIcon)
+    }
 
 
     return (
@@ -75,103 +93,261 @@ export const ListaPraTop = () => {
                 </Box>
 
                 <Stack sx={{ colpr: 'red', gap: '2rem' }}>
-                    <Cards
-
-                        title='1 COMO DEVE SER MINHA MOCHILA?'
-
-                        text1='- SUA MOCHILA DEVE TER NO MÁXIMO 60 LITROS DE CAPACIDADE'
-
-                        text2="- O PESO TOTAL DA MOCHILA DEVE SER DE APROXIMADAMENTE 14 KG,
-                    INCLUINDO A BARRACA SACO DE DORMIR, ROUPA, ÁGUA E ETC"
-
-                        text3=" -  TRAGA UMA COBERTURA IMPERMEÁVEL PARA A MOCHILA
-                        (PODE SER UM SACO PLÁSTICO, CAPA OU COBERTURA ESPECÍFICA)"
-
-                        text4=" - A SUA MOCHILA É INDIVIDUAL"
-                    />
-
-                    <Cards
-                        title='2 QUAIS DOCUMENTOS DEVO LEVAR?'
-
-                        text1=' - DOCUMENTO DE IDENTIFICAÇÃO COM FOTO (RG OU CNH);'
-
-                        text2="- NO CASO DE ESTRANGEIROS, O DOCUMENTO NECESSÁRIO SERA O PASSAPORTE"
-
-                        text3="- DADOS DE CONTATO EM CASO DE EMERGÉNCIA."
-
-                    />
-                    <Cards
-                        title='3 QUAIS ROUPAS DEVO LEVAR?'
-
-                        text1=' -CALÇA PARA CAMINHADA OU ATIVIDADE ESPORTIVA (NÃO TRAGA JEANS).'
-
-                        text2=" - BERMUDA PARA BANHO;"
-
-                        text3="- CAMISETA DE MANGA CURTA E LONGA;"
 
 
-                        text4=' - - BONÉ OU CHAPÉU;'
+                    <Stack in={expanded} timeout="auto" unmountOnExit>
 
-                        text5="- JAQUETA IMPERMEÁVEL"
+                        <Stack>
+                            <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                                1 - COMO DEVE SER MINHA MOCHILA?
+                            </Typography>
 
-                        text6="- PAR DE LUVAS PARA TREKKING"
+                            <ExpandMore
+                                expand={expanded}
+                                onClick={handleExpandClick}
+                                aria-expanded={expanded}
+                                aria-label="show more"
+                            >
 
+                                <ExpandMoreIcon />
 
+                            </ExpandMore>
 
-                        text7=' - MANTA/COBERTOR TÉRMICO.'
+                            <Box>
 
-                        text8="- MEIAS ESPORTIVAS PARA CAMINHADA (APROXIMADAMENTE 3 PARES)"
-                    />
+                                <Collapse in={expanded} timeout="auto" unmountOnExit>
 
+                                    <Cards
 
-                    <Cards
-                        title='4 QUE CALÇADOS DEVO LEVAR?'
+                                        text1='- SUA MOCHILA DEVE TER NO MÁXIMO 60 LITROS DE CAPACIDADE'
 
-                        text1=' - TÊNIS OU BOTA PARA MONTANHA.'
-                    />
+                                        text2="- O PESO TOTAL DA MOCHILA DEVE SER DE APROXIMADAMENTE 14 KG,
+                                            INCLUINDO A BARRACA SACO DE DORMIR, ROUPA, ÁGUA E ETC"
 
-                    <Cards
-                        title='5 O QUE LEVAR PARA DORMIR?'
+                                        text3=" -  TRAGA UMA COBERTURA IMPERMEÁVEL PARA A MOCHILA
+                                             (PODE SER UM SACO PLÁSTICO, CAPA OU COBERTURA ESPECÍFICA)"
 
-                        text1=' -TRAGA UMA JARRA OU CÓPO DE ALUMÍNlO (CONFIRME QUE PODERÁ FERVER ÁGUA NELA).'
+                                        text4=" - A SUA MOCHILA É INDIVIDUAL"
+                                    />
+                                </Collapse>
+                            </Box>
 
-                        text2="- GARRAFA DE ÁGUA (REUTILIZÁVEL OU EQUIPAMENTO DE HIDRATAÇÃO)"
+                        </Stack>
 
-                        text3=' - 01 LITRO DE ÁGUA PARA A PRIMEIRA NOITE'
+                    </Stack>
 
-                        text4=" - NÃO TRAGA NENHUM ALIMENTO (EXCETO TENHA ALGUMA DIETA RESTRITA , ALERGIA, ETC)"
-                    />
-                    <Cards
-                        title='6 O QUE LEVAR PARA DORMIR?'
+                    <Stack>
+                        <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                            2 - QUAIS DOCUMENTOS DEVO LEVAR?
+                        </Typography>
 
-                        text1=' - TRAGA UMA JARRA OU CÓPO DE ALUMÍNlO (CONFIRME QUE PODERÁ
-                        FERVER ÁGUA NELA).'
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
 
-                        text2="- COLHER E GARFO PLÁSTICO;"
+                            <ExpandMoreIcon />
 
-                        text3='- GARRAFA DE ÁGUA (REUTILIZÁVEL OU EQUIPAMENTO DE HIDRATAÇÃO); '
+                        </ExpandMore>
 
-                        text4=" - 01 LITRO DE ÁGUA PARA A PRIMEIRA NOITE;"
+                        <Box>
 
-                        text5=" - NÃO TRAGA NENHUM ALIMENTO (EXCETO TENHA ALGUMA DIETA RESTRITA,ALERGIA, ETC)."
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
 
-                    />
+                                <Cards
 
-                    <Cards
-                        title='7  QUAIS MATERIAIS DE HIGIENE PESSOAL DEVO LEVAR?'
+                                    text1=' - DOCUMENTO DE IDENTIFICAÇÃO COM FOTO (RG OU CNH);'
 
-                        text1='TOALHA'
+                                    text2="- NO CASO DE ESTRANGEIROS, O DOCUMENTO NECESSÁRIO SERA O PASSAPORTE"
 
-                        text2="- PAPEL HIGIÊNICO OU LENÇO UMEDECIDO"
+                                    text3="- DADOS DE CONTATO EM CASO DE EMERGÉNCIA."
+                                />
+                            </Collapse>
+                        </Box>
 
-                        text3='- BAND-AID OU SIMILAR '
+                    </Stack>
+                    <Stack>
+                        <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                            3 - QUAIS ROUPAS DEVO LEVAR?
+                        </Typography>
 
-                        text4=" - VASELINA, TALCO OU POMADA PARA ASSADURAS"
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
 
-                        text5=" -REPELENTE; "
+                            <ExpandMoreIcon />
 
+                        </ExpandMore>
 
-                    />
+                        <Box>
+
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+                                <Cards
+
+                                    text1=' -CALÇA PARA CAMINHADA OU ATIVIDADE ESPORTIVA (NÃO TRAGA JEANS).'
+
+                                    text2=" - BERMUDA PARA BANHO;"
+
+                                    text3="- CAMISETA DE MANGA CURTA E LONGA;"
+
+                                    text4=' - - BONÉ OU CHAPÉU;'
+
+                                    text5="- JAQUETA IMPERMEÁVEL"
+
+                                    text6="- PAR DE LUVAS PARA TREKKING"
+
+                                    text7=' - MANTA/COBERTOR TÉRMICO.'
+
+                                    text8="- MEIAS ESPORTIVAS PARA CAMINHADA (APROXIMADAMENTE 3 PARES)"
+                                />
+                            </Collapse>
+                        </Box>
+
+                    </Stack>
+
+                    <Stack>
+                        <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                            4 - QUE CALÇADOS DEVO LEVAR?
+                        </Typography>
+
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+
+                            <ExpandMoreIcon />
+
+                        </ExpandMore>
+
+                        <Box>
+
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+                                <Cards
+
+                                    text1=' - TÊNIS OU BOTA PARA MONTANHA.'
+                                />
+                            </Collapse>
+                        </Box>
+
+                    </Stack>
+
+                    <Stack>
+                        <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                            5 - O QUE LEVAR PARA DORMIR?
+                        </Typography>
+
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+
+                            <ExpandMoreIcon />
+
+                        </ExpandMore>
+
+                        <Box>
+
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+                                <Cards
+                                    text1=' -TRAGA UMA JARRA OU CÓPO DE ALUMÍNlO (CONFIRME QUE PODERÁ FERVER ÁGUA NELA).'
+
+                                    text2="- GARRAFA DE ÁGUA (REUTILIZÁVEL OU EQUIPAMENTO DE HIDRATAÇÃO)"
+
+                                    text3=' - 01 LITRO DE ÁGUA PARA A PRIMEIRA NOITE'
+
+                                    text4=" - NÃO TRAGA NENHUM ALIMENTO (EXCETO TENHA ALGUMA DIETA RESTRITA , ALERGIA, ETC)"
+                                />
+                            </Collapse>
+                        </Box>
+
+                    </Stack>
+
+                    <Stack>
+                        <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                            6 - O QUE LEVAR PARA DORMIR?
+                        </Typography>
+
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+
+                            <ExpandMoreIcon />
+
+                        </ExpandMore>
+
+                        <Box>
+
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+                                <Cards
+                                    text1=' - TRAGA UMA JARRA OU CÓPO DE ALUMÍNlO (CONFIRME QUE PODERÁ
+                                    FERVER ÁGUA NELA).'
+
+                                    text2="- COLHER E GARFO PLÁSTICO;"
+
+                                    text3='- GARRAFA DE ÁGUA (REUTILIZÁVEL OU EQUIPAMENTO DE HIDRATAÇÃO); '
+
+                                    text4=" - 01 LITRO DE ÁGUA PARA A PRIMEIRA NOITE;"
+
+                                    text5=" - NÃO TRAGA NENHUM ALIMENTO (EXCETO TENHA ALGUMA DIETA RESTRITA,ALERGIA, ETC)."
+                                />
+                            </Collapse>
+                        </Box>
+
+                    </Stack>
+
+                    <Stack>
+                        <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                            7 - QUAIS MATERIAIS DE HIGIENE PESSOAL DEVO LEVAR?
+                        </Typography>
+
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+
+                            <ExpandMoreIcon />
+
+                        </ExpandMore>
+
+                        <Box>
+
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+                                <Cards
+                                    text1='TOALHA'
+
+                                    text2="- PAPEL HIGIÊNICO OU LENÇO UMEDECIDO"
+
+                                    text3='- BAND-AID OU SIMILAR '
+
+                                    text4=" - VASELINA, TALCO OU POMADA PARA ASSADURAS"
+
+                                    text5=" -REPELENTE; "
+
+                                />
+                            </Collapse>
+                        </Box>
+
+                    </Stack>
+
                     <Typography
                         sx={{
                             color: '#eb4d01;',
@@ -181,23 +357,41 @@ export const ListaPraTop = () => {
                     >
                         <h2 className="heading">LEMBRE-SE DE QUE TODOS DEVEMOS <span>TER RESPEITO PELO MEIO AMBIENTE</span></h2>
                     </Typography>
+                </Stack>
 
 
-                    <Cards
-                        title='8 OUTROS ARTIGOS ÚTEIS'
+                <Stack>
+                    <Typography sx={{ color: '#eb4d01', fontSize: '1.9rem', fontWeight: '700' }}>
+                        9 - OUTROS ARTIGOS ÚTEIS
+                    </Typography>
 
-                        text1=" - LANTERNA DE CABEÇA"
-                        text2="- PILHAS EXTRAS;"
-                        text3="- BÍBLIA (OBRIGATÓRIO - TRAGA NUMA EMBALAGEM QUE A IMPEÇA DE MOLHAR)"
-                        text4="- BASTÃO PARA CAMINHADA (OPCIONAL)"
-                        text5=" BOLSAS TIPO ZIPLOCK"
-                        text6="- 200 GRAMAS DE CAL"
-                        text7="- - PROIBIDO LÂMINAS CORTANTES."
+                    <ExpandMore
+                        expand={expanded}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
 
-                    />
+                        <ExpandMoreIcon />
 
+                    </ExpandMore>
 
+                    <Box>
 
+                        <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+                            <Cards
+                                text1=" - LANTERNA DE CABEÇA"
+                                text2="- PILHAS EXTRAS;"
+                                text3="- BÍBLIA (OBRIGATÓRIO - TRAGA NUMA EMBALAGEM QUE A IMPEÇA DE MOLHAR)"
+                                text4="- BASTÃO PARA CAMINHADA (OPCIONAL)"
+                                text5=" BOLSAS TIPO ZIPLOCK"
+                                text6="- 200 GRAMAS DE CAL"
+                                text7="- - PROIBIDO LÂMINAS CORTANTES."
+
+                            />
+                        </Collapse>
+                    </Box>
 
                 </Stack>
 

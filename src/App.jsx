@@ -6,6 +6,7 @@ import { Home } from './pages/home'
 import { MainLayout } from "./layouts/mylayouts"
 import { Login } from './componente/contatos/contacts'
 import { ListaPraTop } from './componente/listaParaTop/listToTop'
+import { MeteriasparaTop } from './componente/features/oQuelevar'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/ListaPraTop' element={<ListaPraTop />} />
+          <Route path='/MeteriasparaTop' element={<MeteriasparaTop />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>
