@@ -55,55 +55,8 @@ export const MeteriasparaTop = () => {
     };
 
     const createnewcard = [
-        {
-            avatar: 'p',
-            userName: ' Caneca Inox',
-            filmPhoto: `${CanecaInox}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
 
-        {
-            avatar: 'p',
-            userName: 'Jacketa',
-            filmPhoto: `${Jacketa}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Isolante térmico ',
-            filmPhoto: `${IsolanteTermico}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Bolsa',
-            filmPhoto: `${LitrosBolso}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Toalha de banho',
-            filmPhoto: `${ToalhaBanho}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Mochila',
-            filmPhoto: `${Muclhila}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
+
         , {
             avatar: 'p',
             userName: 'Computador ',
@@ -120,94 +73,10 @@ export const MeteriasparaTop = () => {
             drama asiático; fez-me refletir um pouco sobre
             os valores de culturas distintas`,
         },
-        {
-            avatar: 'p',
-            userName: 'Meias',
-            filmPhoto: `${Meias}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Água',
-            filmPhoto: `${Agua}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Bastão para Caminhada',
-            filmPhoto: `${BastaoCaminhada}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Bíblia Sagrada',
-            filmPhoto: `${Biblia}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Conjuto de Talher',
-            filmPhoto: `${ConjutoTalher}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Manta Termica',
-            filmPhoto: `${MantaTermica}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Lanterna',
-            filmPhoto: `${Lanterna}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Lona',
-            filmPhoto: `${Lona}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Lenço Multiuso',
-            filmPhoto: `${MultiusoLencos}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Repelente',
-            filmPhoto: `${Repelente}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        },
-        {
-            avatar: 'p',
-            userName: 'Talco ou Cal',
-            filmPhoto: `${Talco}`,
-            description: `Foi incrível conhecer um pouco mais da cultura chinesa e do
-            drama asiático; fez-me refletir um pouco sobre
-            os valores de culturas distintas`,
-        }
+
+
+
+
     ]
 
     return (
@@ -222,7 +91,7 @@ export const MeteriasparaTop = () => {
 
                 }}
             >
-                <h2 className="heading">Lista de itens úteis para <span> você levar para o Top</span></h2>
+                <h2 className="heading">Listas  úteis  para<span>  você legendario</span></h2>
             </Typography>
 
 
@@ -298,6 +167,7 @@ export const MeteriasparaTop = () => {
                                         {newStyle?.description}
                                     </Typography>
                                 </CardContent>
+
                                 <CardActions disableSpacing>
 
                                     <IconButton sx={{ color: '#f6410a' }} aria-label="add to favorites">

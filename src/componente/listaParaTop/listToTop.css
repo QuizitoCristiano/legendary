@@ -60,3 +60,55 @@ body {
     letter-spacing: -.019em;
     color: white;
 }
+
+
+
+.container_home {
+    background-color: #323238;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    text-align: center;
+    position: relative;
+    height: 768px;
+}
+
+.wrapper-container {
+    background: #0ef;
+}
+
+.profession-container {
+    position: relative;
+
+    /* transform: translateX(-50%); */
+    /* width: 768px;
+    height: 768px; */
+    /* background: red; */
+    outline: hidden;
+    pointer-events: none;
+
+}
+
+.profession-box {
+    /* position: absolute; */
+    /* top: 0;
+    right: 0; */
+    position: relative;
+    width: 768px;
+    height: 768px;
+    background: #eb4d01;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profession-box .profession {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #1f242d;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 384px;
+}
